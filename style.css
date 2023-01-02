@@ -513,7 +513,7 @@ video {
 .grid-item > .img {
     height: 70%;
     background-size: cover;
-    
+    position: relative;
     transition-duration: 0.5s;
 }
 
@@ -762,8 +762,6 @@ video {
     display: flex;
     height: 60vh;
     gap: 10%;
-    position: relative;
-    
 }
 
 #lastest_thoughts > :nth-of-type(1) {
@@ -1226,6 +1224,7 @@ footer > .lower > p {
     }
 
     #latestProjects {
+        height: 400px;
         display: grid;
         grid-template-columns: repeat(4, 80%);
         overflow-x: scroll;
@@ -1237,6 +1236,12 @@ footer > .lower > p {
 
     #services_left {
         flex: 1;
+    }
+
+    #lastest_thoughts {
+        display: flex;
+        height: 4git00px;
+        gap: 10%;
     }
 
     #lastest_thoughts > :nth-of-type(1) {
@@ -1264,9 +1269,23 @@ footer > .lower > p {
 
     #footer_lower_right {
         order: 1;
+        height: 40%;
+        gap: 3vw;
+    }
+    #footer_lower_right a {
+        font-size: 1.75rem;
+        letter-spacing: 2px;
     }
 
     #footerNEURO {
         order: 2;
+    }
+
+    #footerNEURO h4 {
+        font-size: 2rem;
+    }
+
+    #footer_lower_left p,#footer_lower_left a {
+        font-size: 1.45rem;
     }
 }
