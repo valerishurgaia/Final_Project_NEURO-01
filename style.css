@@ -340,7 +340,7 @@ body {
 
 .yellowText {
     color: rgba(229, 229, 72, 1);
-    text-decoration: line-through 0.1rem;
+    text-decoration: line-through 1px;
     -webkit-text-stroke: 0;
 }
 
@@ -1170,6 +1170,15 @@ footer > .lower > p {
     .upper > .contact {
         flex-direction: row;
         gap: 10vw;
+        width: 80%;
+    }
+
+    .upper > .contact a, .upper > .contact p {
+        font-size: 1.5rem;
+    }
+
+    .contact h4 {
+        font-size: 1.75rem;
     }
 
     .lower {
@@ -1239,7 +1248,7 @@ footer > .lower > p {
 
     #lastest_thoughts {
         display: flex;
-        height: 4git00px;
+        height: 400px;
         gap: 10%;
     }
 
@@ -1251,7 +1260,24 @@ footer > .lower > p {
         width: 80%;
     }
 
+    .three .page_three-five_lower {
+        display: none;
+    }
+
     .page_three-five_lower {
+        justify-content: center;
+        
+    }
+
+    .page_three-five_lower button {
+        width: 70%;
+    }
+
+    .transparentButton {
+        font-size: 1.25rem;
+    }
+
+    .page_three-five_lower .yellowToggle {
         display: none;
     }
 
