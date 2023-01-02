@@ -179,7 +179,6 @@ body {
 #logo {
     height: 3.125rem;
     background-color: black;
-    outline:1px solid rgba(229, 229, 72, 1);
     border-radius: 60px;
 }
 
@@ -263,10 +262,6 @@ body {
 }
 
 .menu > li {
-    display: flex;
-    flex-direction: column;
-    align-items: space;
-    justify-content: space-between;
     text-align: start;
     list-style: none;
 }
@@ -497,6 +492,7 @@ video {
     position: relative;
     transition-duration: 0.5s;
     background-color: var(--black-to-white);
+    cursor: pointer;
 }
 
 .cut_left_corner::before {
@@ -533,7 +529,6 @@ video {
     left: 0;
     bottom: 0;
     -webkit-text-stroke:2px rgba(255, 255, 255, 1) ;
-    cursor: default;
 }
 
 .grid-item:hover {
@@ -598,27 +593,23 @@ video {
 .aboutProject {
     padding: 25px 0 0 2vw;
     width: 95%;
-    cursor: default;
 }
 
 .projectCapture {
     color: rgba(229, 229, 72, 1);
     font-size: 1.5rem;
     letter-spacing: 0.25rem;
-    cursor: default;
     display: inline-block;
 }
 
 .projectParagraph {
     font-size: 1.32rem;
     padding: 12px 0;
-    cursor: default;
 }
 
 .projectDotText {
     padding: 8px 0 0 12px;
     font-size: 1rem;
-    cursor: default;
 }
 
 .projectDotText > li::marker {
@@ -913,8 +904,6 @@ footer > .lower {
     display: flex;
     gap: 8vw;
     margin: 1vh 0 ;
-    /* position: absolute;
-    bottom: 0; */
 }
 
 footer > .lower > p {
@@ -935,7 +924,6 @@ footer > .lower > p {
 
 @media only screen and (max-width: 1450px) and (min-width: 1201px)  {
     html {
-        /* font-size: 12px; */
         font-size: clamp(11px, 5.142px + 0.5714vw, 12px);
     }
 
@@ -947,7 +935,6 @@ footer > .lower > p {
 /*  For large screens like Desktops */
 @media only screen and (max-width: 1200px) and (min-width: 1025px)  {
     html {
-        /* font-size: 11px; */
         font-size: clamp(10px, 4.142px + 0.5714vw, 11px);
     }
 
@@ -1033,7 +1020,6 @@ footer > .lower > p {
         width: 5%;
         height: 50%;
         justify-content:center;
-        /* gap: 4.5px; */
         gap: 0.281rem;
         transform: rotate(-90deg);
         cursor: pointer;
@@ -1108,7 +1094,7 @@ footer > .lower > p {
     #services_right {
     width: 30%;
     }
-    
+
     .services_images {
         height: 70%;
     }
@@ -1145,7 +1131,7 @@ footer > .lower > p {
     }
 }
 
-@media only screen and (max-width: 485px) and (min-width: 300px) {
+@media only screen and (max-width: 485px) {
     
     html {
         font-size: clamp(7px, 3.757px + 1.0811vw, 8px);
@@ -1266,7 +1252,6 @@ footer > .lower > p {
 
     .page_three-five_lower {
         justify-content: center;
-        
     }
 
     .page_three-five_lower button {
@@ -1299,11 +1284,14 @@ footer > .lower > p {
     #footer_lower_right {
         order: 1;
         height: 40%;
-        gap: 3vw;
     }
     #footer_lower_right a {
         font-size: 1.75rem;
         letter-spacing: 2px;
+    }
+
+    #footer_lower > :last-child{
+        gap: 15vw;
     }
 
     #footerNEURO {
@@ -1311,7 +1299,7 @@ footer > .lower > p {
     }
 
     #footerNEURO h4 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     #footer_lower_left p,#footer_lower_left a {
