@@ -170,7 +170,6 @@ body {
     height: 14vh;
     gap:4vw;
     transition-duration: 1s;
-    
 }
 
 .header .nav_toggle {
@@ -1158,7 +1157,7 @@ footer > .lower > p {
         overflow: hidden;
         background: url(./img/backgroun\ img.jpg) no-repeat;
         background-size: contain;
-        background-color: black;
+        background-color: var(--black-to-white);
     }
 
     .upper {
@@ -1244,6 +1243,10 @@ footer > .lower > p {
         gap: 10%;
     }
 
+    #lastest_thoughts .img {
+        position: relative;
+    }
+
     #lastest_thoughts > :nth-of-type(1) {
         width: 80%;
     }
@@ -1263,7 +1266,7 @@ footer > .lower > p {
     #footer_lower {
         flex-direction: column;
         justify-content: center;
-        gap: 10%;
+        gap: 5%;
         height: 40vh;
     }
 
@@ -1287,5 +1290,9 @@ footer > .lower > p {
 
     #footer_lower_left p,#footer_lower_left a {
         font-size: 1.45rem;
+    }
+
+    #footer #menu_items a  {
+        margin-top: 2px;
     }
 }
