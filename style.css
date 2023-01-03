@@ -274,6 +274,7 @@ body {
     color: rgba(229, 229, 72, 1);
     text-decoration: line-through 0.1rem;
     transition-duration: 0.4s;
+    
 }
 .hidden {
     color: transparent;
@@ -337,6 +338,10 @@ body {
     color: rgba(229, 229, 72, 1);
     text-decoration: line-through 1px;
     -webkit-text-stroke: 0;
+    text-decoration-line: line-through ;
+    -webkit-text-decoration-line: line-through;
+    text-decoration-color: rgba(229, 229, 72, 1);
+    -webkit-text-decoration-color: rgba(229, 229, 72, 1);
 }
 
 #home_page_text :nth-of-type(3) {
@@ -574,11 +579,11 @@ video {
 }
 
 .project01 {
-    background: url(./img/project01.jpg) no-repeat;
+    background: url(./img/project_01.jpg) no-repeat;
 }
 
 .project02 {
-    background: url(./img/project02.jpg) no-repeat;
+    background: url(./img/project_02.jpg) no-repeat;
 }
 
 .project03 {
@@ -1130,7 +1135,7 @@ footer > .lower > p {
         margin-bottom: 15px;
     }
 }
-
+/* For mobile devices */
 @media only screen and (max-width: 485px) {
     
     html {

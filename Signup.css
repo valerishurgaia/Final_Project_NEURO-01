@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(./img/Signup_background.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    position: absolute;
+    right: 5.625rem;
+    padding: 8vh 5vw 6vh;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+form > div {
+    display: flex;
+}
+
+label, p {
+    font-size: 0.75rem;
+    color: rgba(116, 138, 161, 1);
+}
+
+label {
+    padding-left: 8px;
+    margin-bottom: 5px;
+}
+
+
+label,input, #upper, #middle_lower > div, form > div > div{
+    display:flex;
+    flex-direction:column;
+}
+
+#upper {
+    gap: 5px;
+}
+
+#middle {
+    box-shadow: 0px 1px 4px 0px #E5E9F2;
+    height: 100%;
+    padding: 4vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#middle {
+    gap: 0.375rem;
+} 
+
+#middle_lower {
+    flex-direction: row;
+    gap: 0.375rem;
+}
+
+#middle_lower > div {
+    width: 50%;
+}
+
+input, button, select {
+    height: 2.125rem;
+    border-radius: 5px;
+}
+
+#middle button {
+    background-color: #29CB97;
+}
+
+input, select {
+    border: 1px solid #EBEDF4;
+}
+
+input {
+    padding-left: 5px;
+}
+
+button {
+    border:none;
+    color: white;
+}
+
+#lower {
+    gap:2.5rem;
+}
+
+#lower > button  {
+    width: 50%;
+}
+
+#lower > :first-child {
+    background-color: #255B9B;
+}
+
+#lower > :last-child {
+    background-color: #00ADEE;
+}
+
+
+@media only screen and (min-width: 1750px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media only screen  and (min-width: 1450px) and (max-width: 1749px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media only screen  and (min-width: 1201px) and (max-width: 1449px) {
+    html {
+        font-size: 18px
+    }
+}
+
+@media only screen  and (max-width: 700px) {
+    body {
+        justify-content: center;
+    }
+
+    form {
+        position: static;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-image: none;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
