@@ -85,6 +85,10 @@ input, button, select {
     background-color: #29CB97;
 }
 
+#middle button:hover {
+    background-color: #1c9b73;
+}
+
 input, select {
     border: 1px solid #EBEDF4;
 }
@@ -96,6 +100,8 @@ input {
 button {
     border:none;
     color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 #lower {
@@ -110,10 +116,31 @@ button {
     background-color: #255B9B;
 }
 
+#lower > :first-child:hover {
+    background-color: #1d426e;
+}
+
 #lower > :last-child {
     background-color: #00ADEE;
 }
 
+#lower > :last-child:hover {
+    background-color: #03759e;
+}
+
+.error {
+    font-size: 0.75rem;
+    color: red;
+}
+
+.Redtext {
+    margin-top: 5px; 
+    padding-left: 8px;
+}
+
+.inputError {
+    border: 1px solid red;
+}
 
 @media only screen and (min-width: 1750px) {
     html {
@@ -151,6 +178,11 @@ button {
 
     form {
         width: 100%;
+    }
+
+    input, button, select {
+        height: 2.65rem;
+        border-radius: 5px;
     }
 }
 

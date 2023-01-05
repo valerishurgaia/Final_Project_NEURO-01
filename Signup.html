@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="Signup.css">
 </head>
 <body>
-    <form>
+    <form id="form" action="./weather.html">
         <div id="upper">
             <h1>Signup</h1>
             <p>There is no charge upon registration!</p>
@@ -19,11 +19,13 @@
         <div id="middle">
             <div id="email_input">
                 <label for="email">Email Address </label>
-                <input id="email" type="email">
+                <input id="email" type="text">
+                <div class="error Redtext" ></div>
             </div>
-            <div id="country_select">
+            <div  id="country_select">
                 <label for="country">Country</label>
                 <select id="country">
+                    <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Albania">Albania</option>
                     <option value="Algeria">Algeria</option>
@@ -104,7 +106,7 @@
                     <option value="French Southern Territories">French Southern Territories</option>
                     <option value="Gabon">Gabon</option>
                     <option value="Gambia">Gambia</option>
-                    <option value="Georgia" selected>Georgia</option>
+                    <option value="Georgia">Georgia</option>
                     <option value="Germany">Germany</option>
                     <option value="Ghana">Ghana</option>
                     <option value="Gibraltar">Gibraltar</option>
@@ -264,24 +266,30 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
+                <div class="error Redtext"></div>
             </div>
             <div id="middle_lower">
                 <div id="city_input">
                     <label for="city">City</label>
                     <input id="city" type="text">
+                    <div class="error Redtext"></div>
                 </div>
                 <div id="zipCode_input">
                     <label for="zipCode">Zip Code</label>
                     <input id="zipCode" type="text">
+                    <div class="error Redtext"></div>
                 </div>
             </div>
-
+            <div>
             <button id="submitButton" type="submit">Signup now</button>
+            </div>
         </div>
         <div id="lower">
             <button type="button">Signup with Facebook</button>
             <button type="button">Signup with Facebook</button>
         </div>
     </form>
+
+    <script src="Signup.js"></script>
 </body>
 </html>
