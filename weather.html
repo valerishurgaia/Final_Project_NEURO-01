@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Weather</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <h1>Weather page</h1>
+    <header id="header"> 
+        <div id="header_left">
+            <img  id="header_icon"src="./img/weather_icon.png">
+            <p>Weather by VicBox</p>
+        </div>
+        <div id="header_right">
+            <a href="#">GitHub</a>
+            <a href="#">About</a>
+        </div>
+    </header>
+    <section id="section">
+        <article class="section_items" id="location_condition">
+
+        </article>
+        <article class="section_items"  id="add_location">
+
+        </article>
+    </section>
+
+    <footer>Made with <img src="./img/weather_heart_icon.png"> by Victor Alvarado</footer>
+
+    <script src="weather.js"></script>
 </body>
 </html>
