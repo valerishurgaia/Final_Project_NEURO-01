@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8%;
-    overflow: scroll;
 }
 
 #header_icon {
@@ -48,20 +47,130 @@ body {
     align-self: center;
     width: 100%;
     display: flex;
-    flex-wrap:wrap ;
     justify-content: center;
     gap: 3rem;
     flex: 5;
+    flex-wrap: wrap;
+
 }
 
 .section_items {
-    background-color:#000000;
-    opacity: 0.2;
+    background:rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(16px);
     border-radius: 48px;
-    height: 100%;
+    height: 60vh;
     width: 35rem;
+    padding: 3.5rem 2rem;
+}
 
+#location_condition, #location_condition_lower {
+    display: flex;
+    flex-direction: column;
+}
+
+#location_condition > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#location_condition p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+#location_condition h2 {
+    font-size: 1.75rem;
+}
+
+#location_condition h1 {
+    font-size: 10rem;
+    font-weight: 300;
+}
+
+#celsius_number{
+    height: min-content;
+    position: relative;
+}
+
+#celsius_number::after {
+    content: "°C";
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    top: 20%;
+}
+
+#location_condition_upper > img {
+    width: 5.5rem;
+}
+
+#location_condition_middle{
+    flex:1;
+    align-items: center;
+}
+
+#location_condition_lower {
+    display: flex;
+    gap: 2rem;
+}
+
+.data_items {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.data_items > :last-child {
+    justify-content: flex-end;
+    border-left: 1px solid white;
+}
+
+.weather_data {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 2rem;
+}
+
+#visibility_data {
+    gap: 2.7rem;
+}
+
+#wind_data {
+    gap: 3.5rem;
+}
+
+.weather_data > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#add_location, #add_location button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#add_location button{
+    display: flex;
+    font-size: 4rem;
+    border: none;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.26);
+    margin-top: 0.5rem;
+}
+
+#add_location img {
+    width: 3rem;
+}
+
+#add_location label {
+    font-size: 1.75rem;
 }
 
 footer {
@@ -72,4 +181,89 @@ footer {
 
 footer img {
     width: 1.5rem;
+}
+
+@media only screen  and (max-width: 1750px)  {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (max-width: 1450px) {
+    html {
+        font-size: 12px;
+    }
+
+    
+}
+
+@media only screen  and (max-width: 1200px) {
+    html {
+        font-size: 10px;
+    }
+    
+}
+
+@media only screen  and (max-width: 750px) {
+    body {
+        height: 160vh;
+        gap: 2%;
+    }
+
+    #header {
+        padding: 0 1.75rem 0 1.25rem;
+    }
+
+    #section {
+        flex-direction: column;
+        align-items: center;
+        flex: 12;
+    }
+}
+
+@media only screen  and (max-width: 485px)  {
+    .section_items {
+        width: 30rem;
+    }
+
+    #header a,p {
+        font-size: 1.5rem;
+    }
+    #header p {
+        display: none;
+    }
+
+    #header > :first-child {
+        gap: 0;
+    }
+
+    #header_icon {
+        width: 4.75rem;
+    }
+
+    .weather_data {
+        gap: 1rem;
+    }
+    
+    #visibility_data {
+        gap: 1.7rem;
+    }
+    
+    #wind_data {
+        gap: 2.5rem;
+    }
+    
+    .weather_data > :first-child {
+        gap: 0.3rem;
+    }
+
+    .data_items > :last-child {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .data_items > :first-child {
+        justify-content: end;
+        padding-right: 15px;
+    }
 }

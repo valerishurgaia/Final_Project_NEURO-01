@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/weather_page_sun.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -23,10 +24,65 @@
     </header>
     <section id="section">
         <article class="section_items" id="location_condition">
-
+            <div id="location_condition_upper">
+                <img src="./img/weather_page_sun.png">
+                <div>
+                    <h2 id="location">Valle de Angeles, HN</h2>
+                    <p id="day">Monday 01/17/2022</p>
+                </div>
+            </div>
+            <div id="location_condition_middle">
+                <h1 id="celsius_number">15</h1>
+            </div>
+            <div id="location_condition_lower">
+                <div class="data_items">
+                    <div class="weather_data" id="visibility_data">
+                        <div>
+                            <img src="./img/weather_visibility_icon.png">
+                            <p>Visibility</p>
+                        </div>
+                        <div>
+                            <p>10KM</p>
+                        </div>
+                    </div>
+                    <div class="weather_data">
+                        <div>
+                            <img src="./img/weather_temperature_icon.png">
+                            <p>Feels like</p>
+                        </div>
+                        <div>
+                            <p>10KM</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="data_items">
+                        <div class="weather_data">
+                            <div>
+                                <img src="./img/weather_humidity_icon.png">
+                                <p>Humidity</p>
+                            </div>
+                            <div>
+                                <p>10KM</p>
+                            </div>
+                        </div>
+                        <div class="weather_data" id="wind_data">
+                            <div>
+                                <img src="./img/weather_wind_icon.png">
+                                <p>Wind</p>
+                            </div>
+                            <div>
+                                <p>10KM</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
         </article>
         <article class="section_items"  id="add_location">
-
+            <button id="add_button" type="button">
+                <img src="./img/weather_add_button_plus.png">
+            </button>
+            <label for="add_button">Add new location</label>
         </article>
     </section>
 
