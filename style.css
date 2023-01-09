@@ -1207,10 +1207,6 @@ footer > .lower > p {
         font-size: 1.25rem;
     }
 
-    #arrow_button img {
-        width: 20px;
-    }
-
     #mobile_homepage_lower > :last-child {
         display: flex;
     }

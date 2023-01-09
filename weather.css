@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #header_icon {
@@ -171,12 +171,17 @@ body {
     gap: 2rem;
 }
 
+.weather_data > :last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
 #visibility_data {
     gap: 2.7rem;
 }
 
 #wind_data {
-    gap: 3.5rem;
+    gap: 4.2rem;
 }
 
 .weather_data > :first-child {
@@ -257,8 +262,6 @@ footer img {
     html {
         font-size: 12px;
     }
-
-    
 }
 
 @media only screen  and (max-width: 1200px) {
@@ -312,22 +315,8 @@ footer img {
     #visibility_data {
         gap: 1.7rem;
     }
-    
+
     #wind_data {
-        gap: 2.5rem;
-    }
-    
-    .weather_data > :first-child {
-        gap: 0.3rem;
-    }
-
-    .data_items > :last-child {
-        justify-content: flex-start;
-        padding-left: 15px;
-    }
-
-    .data_items > :first-child {
-        justify-content: end;
-        padding-right: 15px;
+        gap: 3.2rem;
     }
 }
