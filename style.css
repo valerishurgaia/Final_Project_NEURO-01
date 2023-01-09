@@ -421,7 +421,7 @@ video {
     width: 100%;
 }
 
-#mobile_homepage_lower {
+#mobile_homepage_lower > :last-child {
     display: none;
 }
 
@@ -1143,12 +1143,8 @@ footer > .lower > p {
     }
     
     .one {
-        height: 100vh;
-        display: flex;
-        overflow: hidden;
         background: url(./img/backgroun\ img.jpg) no-repeat;
         background-size: contain;
-        background-color: var(--black-to-white);
     }
 
     .upper {
@@ -1205,8 +1201,18 @@ footer > .lower > p {
         align-items: flex-start;
     }
 
-    #arrow_button {
-        align-self: flex-end;
+    .circle_button:not(#contact_us) {
+        width: 9rem;
+        height: 9rem;
+        font-size: 1.25rem;
+    }
+
+    #arrow_button img {
+        width: 20px;
+    }
+
+    #mobile_homepage_lower > :last-child {
+        display: flex;
     }
 
     .notMobile {

@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8%;
+    overflow: hidden;
 }
 
 #header_icon {
@@ -29,12 +30,28 @@ body {
     padding: 0 4.75rem 0 4.25rem;
     width: 100%;
     flex: 1;
+    position: relative;
+    animation: headerAnimation 1.5s ease;
 } 
+
+@keyframes headerAnimation {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
 
 #header a, p {
     font-size: 1.8rem;
     font-weight: 300;
     text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+#header a:hover {
+    transform: translateY(-0.2rem);
 }
 
 #header > div {
@@ -102,6 +119,28 @@ body {
 
 #location_condition_upper > img {
     width: 5.5rem;
+    animation: rotate 5s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+#location_condition {
+    position: relative;
+    animation: locationConditionAnim 1.5s ease ;
+}
+
+@keyframes locationConditionAnim {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 #location_condition_middle{
@@ -146,12 +185,27 @@ body {
     gap: 0.5rem;
 }
 
+#add_location {
+    position: relative;
+    animation: addlocationAnimation  1.5s ease;
+}
+
+@keyframes addlocationAnimation {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
 #add_location, #add_location button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
 }
 
 #add_location button{
@@ -177,6 +231,16 @@ footer {
     font-size: 1.5rem;
     font-weight: 300;
     flex: 1;
+    animation: footerAnimation 3.5s ;
+}
+
+@keyframes footerAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 footer img {
@@ -223,7 +287,7 @@ footer img {
 
 @media only screen  and (max-width: 485px)  {
     .section_items {
-        width: 30rem;
+        width: 32rem;
     }
 
     #header a,p {
