@@ -16,6 +16,7 @@
     --scrollbar-thumb-bg-color: rgba(229, 229, 72, 1);
     --transparent_text_border:rgba(102, 102, 102, 1);
     --black-to-transparent: black;
+    --mobile-home_page-background: rgb(0, 0, 0, 1);
 }
 
 .light-mode {
@@ -1145,6 +1146,7 @@ footer > .lower > p {
     .one {
         background: url(./img/backgroun\ img.jpg) no-repeat;
         background-size: contain;
+        background-color: var(--mobile-home_page-background);
     }
 
     .upper {
