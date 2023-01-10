@@ -56,7 +56,6 @@ label {
     margin-bottom: 5px;
 }
 
-
 label,input, #upper, #middle_lower > div, form > div > div{
     display:flex;
     flex-direction:column;
@@ -154,6 +153,7 @@ button {
     border: 1px solid red;
 }
 
+/* For extra large screens like TV */
 @media only screen and (min-width: 1750px) {
     html {
         font-size: 28px;
@@ -182,6 +182,7 @@ button {
     }
 }
 
+/*  For large screens like Desktops */
 @media only screen  and (min-width: 1201px) and (max-width: 1449px) {
     html {
         font-size: 18px
@@ -192,6 +193,7 @@ button {
     }
 }
 
+/* For tablet screen  */
 @media only screen  and (max-width: 700px) {
     body {
         justify-content: center;
@@ -203,6 +205,7 @@ button {
     }
 }
 
+/* For mobile devices */
 @media only screen and (max-width: 485px) {
     html {
         font-size: 18px;

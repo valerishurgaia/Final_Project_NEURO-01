@@ -13,7 +13,6 @@ fetch(api)
         return response.json()
     })
     .then((data) => {
-        console.log(data);
         city.innerText = data.name;
         celsiusNumber.innerText = data.main.temp;
         // visibility უცვლელად წერია 10000 API-ში ყველა ქვეყნისთვის და აღარ დავამატებ...
