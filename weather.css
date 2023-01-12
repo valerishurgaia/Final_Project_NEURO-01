@@ -75,7 +75,7 @@ body {
     backdrop-filter: blur(16px);
     border-radius: 3rem;
     height: 60vh;
-    width: 32rem;
+    width: 32.8rem;
     padding: 3.5rem 2rem;
 }
 
@@ -86,7 +86,8 @@ body {
 
 #location_condition > :nth-of-type(2) {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #location_condition > :first-child{
@@ -106,10 +107,10 @@ body {
 #location_condition h1 {
     font-size: 10rem;
     font-weight: 300;
+    line-height: 10rem;
 }
 
 #celsius_number{
-    height: min-content;
     position: relative;
 }
 
@@ -119,6 +120,7 @@ body {
     font-weight: 300;
     position: absolute;
     top: 20%;
+    line-height: 0;
 }
 
 #location_condition_upper > img {
@@ -154,7 +156,7 @@ body {
 
 #location_condition_lower {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .data_items {
@@ -208,13 +210,40 @@ body {
     }
 }
 
-#add_location, #add_location button {
+.article2, #add_location button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+select, option {
+    color:black;
+    font-size: 1.5rem;
+    width: 15.188rem;
+    transition-duration: 0.5s;
+}
+
+select {
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background:rgba(255, 255, 255, 0.26);
     cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+.select {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.visible {
+    opacity: 1;
 }
 
 #add_location button{
@@ -226,6 +255,10 @@ body {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.26);
     margin-top: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    top: 1.25rem;
+    transition-duration: 0.5s;
 }
 
 #add_location img {
@@ -234,6 +267,15 @@ body {
 
 #add_location label {
     font-size: 1.75rem;
+    cursor: pointer;
+    position: relative;
+    top: 1.25rem;
+    transition-duration: 0.5s;
+}
+
+#add_location .active {
+    top: 0px;
+    transition-duration: 0.5s;
 }
 
 footer {

@@ -18,7 +18,7 @@
             <p>Weather by VicBox</p>
         </div>
         <div id="header_right">
-            <a href="#">GitHub</a>
+            <a href="https://github.com/valerishurgaia?tab=repositories">GitHub</a>
             <a href="#">About</a>
         </div>
     </header>
@@ -33,6 +33,7 @@
             </div>
             <div id="location_condition_middle">
                 <h1 id="celsius_number"></h1>
+                <p id="description"></p>
             </div>
             <div id="location_condition_lower">
                 <div class="data_items">
@@ -78,15 +79,63 @@
                 </div>
             </div>
         </article>
-        <article class="section_items"  id="add_location">
+        <article class="section_items article2"  id="add_location">
             <button id="add_button" type="button">
                 <img src="./img/weather_add_button_plus.png">
             </button>
-            <label for="add_button">Add new location</label>
+            <label for="add_button" id="add_location_label">Add new location</label>
+            <div class="select" id="options">
+                <select value="tbilisi" id="city"> 
+                    <option value="tbilisi" selected>თბილისი</option>
+                    <option value="abastumani">აბასთუმანი</option>
+                    <option value="kutaisi">ქუთაისი</option>
+                    <option value="batumi">ბათუმი</option>
+                    <option value="bakuriani">ბაკურიანი</option>
+                    <option value="zugdidi">ზუგდიდი</option>
+                    <option value="ozurgeti">ოზურგეთი</option>
+                    <option value="kobuleti">ქობულეთი</option>
+                    <option value="gori">გორი</option>
+                    <option value="telavi">თელავი</option>
+                    <option value="senaki">სენაკი</option>
+                    <option value="samtredia">სამტრედია</option>
+                    <option value="akhaltsikhe">ახალციხე</option>
+                    <option value="mestia">მესტია</option>
+                    <option value="gurjaani">გურჯაანი</option>
+                    <option value="khashuri">ხაშური</option>
+                    <option value="chokhatauri">ჩოხატაური</option>
+                    <option value="borjomi">ბორჯომი</option>
+                    <option value="sagarejo">საგარეჯო</option>
+                    <option value="lagodekhi">ლაგოდეხი</option>
+                    <option value="tianeti">თიანეთი</option>
+                    <option value="kharagauli">ხარაგაული</option>
+                    <option value="tskhinvali">ცხინვალი</option>
+                    <option value="rustavi">რუსთავი</option>
+                    <option value="ureki">ურეკი</option>
+                    <option value="surami">სურამი</option>
+                    <option value="poti">ფოთი</option>
+                    <option value="oni">ონი</option>
+                    <option value="shekvetili">შეკვეთილი</option>
+                    <option value="marneuli">მარნეული</option>
+                    <option value="bolnisi">ბოლნისი</option>
+                    <option value="manglisi">მანგლისი</option>
+                    <option value="mtskheta">მცხეთა</option>
+                    <option value="gonio">გონიო</option>
+                    <option value="shovi">შოვი</option>
+                    <option value="tsinandali">წინანდალი</option>
+                    <option value="khobi">ხობი</option>
+                    <option value="tskneti">წყნეთი</option>
+                    <option value="sioni">სიონი</option>
+                    <option value="sukhumi">სოხუმი</option>
+                    <option value="omalo">ომალო</option>
+                    <option value="martvili">მარტვილი</option>
+                    <option value="khoni">ხონი</option>
+                    <option value="adigeni">ადიგენი</option>
+                </select>
+            </div>
         </article>
     </section>
 
-    <footer>Made with <img src="./img/weather_heart_icon.png"> by Victor Alvarado</footer>
+    <footer>Made with <img src="./img/weather_heart_icon.png"> by Valeri Shurgaia</footer>
 
     <script src="weather.js"></script>
 </body>
