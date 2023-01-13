@@ -184,7 +184,7 @@ button {
 
 @media only screen  and (min-width: 1250px) and (max-width: 1449px) {
     html {
-        font-size: 20px
+        font-size: 18px
     }
 
     button, select {
