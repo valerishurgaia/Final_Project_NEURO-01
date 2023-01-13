@@ -298,7 +298,6 @@ footer img {
     width: 1.5rem;
 }
 
-/* For extra large screens like TV */
 @media only screen  and (max-width: 1750px)  {
     html {
         font-size: 14px;
@@ -311,15 +310,13 @@ footer img {
     }
 }
 
-/*  For large screens like Desktops */
-@media only screen  and (max-width: 1200px) {
+@media only screen  and (max-width: 1250px) {
     html {
         font-size: 10px;
     }
     
 }
 
-/* For tablet screen  */
 @media only screen  and (max-width: 750px) {
     body {
         height: 160vh;
@@ -337,7 +334,7 @@ footer img {
     }
 }
 
-/* For mobile devices */
+
 @media only screen  and (max-width: 485px)  {
     #header a,p {
         font-size: 1.5rem;
