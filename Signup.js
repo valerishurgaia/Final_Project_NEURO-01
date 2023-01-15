@@ -13,8 +13,8 @@ form.addEventListener('submit', e => {
     validateZipCode();
 
     email.addEventListener ("keyup", validateEmail);
-    country.addEventListener("blur", validateCountry)
-    city.addEventListener ("keyup", validateCity)
+    country.addEventListener("change", validateCountry);
+    city.addEventListener ("keyup", validateCity);
     zipCode.addEventListener ("keyup", validateZipCode);
 
     if (!email.classList.contains('inputError') &&
@@ -51,7 +51,7 @@ function validateEmail() {
     } else if (!emailValue.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
         setError(email, "Please enter a valid email")
         return false
-    } else if (!emailValue.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[ge]{2,}))$/)){
+    } else if (!emailValue.match( /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.ge+)*$/)){
         setError(email, "Domain should be (.ge)")
         return false
     } else {

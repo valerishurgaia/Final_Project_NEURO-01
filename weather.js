@@ -29,7 +29,7 @@ fetch(api)
     .then((data) => {
         city.innerText = data.name;
         celsiusNumber.innerText = data.main.temp;
-        // visibility უცვლელად წერია 10000 API-ში ყველა ქვეყნისთვის და აღარ დავამატებ...
+        visibilityNumber.innerText = data.visibility;
         FeelsLikeNumber.innerText = data.main.feels_like;
         humidityNumber.innerText = data.main.humidity;
         windNumber.innerText = data.wind.speed;

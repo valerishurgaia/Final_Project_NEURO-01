@@ -9,54 +9,64 @@ const mode = document.querySelector(".mode");
 const toggle = document.querySelector('#toggle');
 const headerNavToggle = document.getElementById('header_nav_toggle');
 const mobileArrBtn = document.querySelector('.notMobile')
+const pageFour = document.getElementById('company');
 
-navbar.onclick = function () {
-    navToggle.classList.toggle('active');
-    navbar.classList.toggle('active');
-    pageOne.classList.toggle('active');
-    slide.classList.toggle('active');
-    header.classList.toggle('active');
+const onClick = (element) => {
+    element.classList.toggle('active');
 }
 
+// For big screen version navbar animation...
+navbar.addEventListener('click', () =>  {
+    onClick(navToggle);
+    onClick(navbar);
+    onClick(pageOne);
+    onClick(slide);
+    onClick(header);
+});
 
-menu.addEventListener('click', function() {
-    navToggle.classList.remove('active');
-    navbar.classList.remove('active');
-    pageOne.classList.remove('active');
-    slide.classList.remove('active');
-    header.classList.remove('active');
+// For close navbar when menu items are clicked...
+const menuItems = Array.from(document.getElementsByClassName("menu_item"));
+menuItems.forEach(items => {
+    items.addEventListener('click', () => {
+        const menuOnClick = (elem) => {
+            elem.classList.remove('active');
+        }
+        menuOnClick(navToggle)
+        menuOnClick(navbar)
+        menuOnClick(pageOne)
+        menuOnClick(slide)
+        menuOnClick(header)
+        menuOnClick(headerNavToggle)
+    })
 })
 
-headerNavToggle.onclick = function () {
-    headerNavToggle.classList.toggle('active');
-    pageOne.classList.toggle('active');
-    slide.classList.toggle('active');
-    header.classList.toggle('active');
-}
 
-menu.addEventListener('click', function() {
-    headerNavToggle.classList.remove('active');
-    pageOne.classList.remove('active');
-    slide.classList.remove('active');
-    header.classList.remove('active');
+// For mobile navbar animation...
+headerNavToggle.addEventListener('click', () => {
+    onClick(headerNavToggle);
+    onClick(pageOne);
+    onClick(slide);
+    onClick(header);
 })
 
 
+// For light mode...
 mode.addEventListener('click', function(){
     document.body.classList.toggle('light-mode');
     mode.classList.toggle('light');
 })
 
-arrowBtn.addEventListener('click' , function() {
+
+// For scroll by arrow from first page...
+const scrollByArrow = () => {
     let pageHeight = window.innerHeight;
     window.scrollBy(0, pageHeight);
-})
+}
+mobileArrBtn.addEventListener('click', scrollByArrow);
+arrowBtn.addEventListener('click', scrollByArrow);
 
-mobileArrBtn.addEventListener('click' , function() {
-    let pageHeight = window.innerHeight;
-    window.scrollBy(0, pageHeight);
-})
 
+// For hide scroll when move to first page...
 window.addEventListener("scroll", function() {
     if (window.scrollY > 0) {
         document.body.style.overflowY = "scroll";
@@ -66,48 +76,24 @@ window.addEventListener("scroll", function() {
 });
 
 
-document.getElementById("item_website").addEventListener('mouseover', () => {
-    document.getElementById("website_img").style.opacity = "1";
-    
-});
-document.getElementById("item_website").addEventListener('mouseout', () => {
-    document.getElementById("website_img").style.opacity = "0";
-    
-});
+// For animate page four (when you hover on list items, it will show image aside)..
+pageFour.addEventListener('mouseover', (e) => {
+    const websiteImg = document.getElementById("website_img");
+    const uiUxImg = document.getElementById("ui/ux_img");
+    const socialMediaImg = document.getElementById("social_media_img")
+    const motionImg = document.getElementById("motion_img");
+    const brandStrategyImg = document.getElementById("brand_strategy_img")
 
-document.getElementById("item_ui/ux").addEventListener('mouseover', () => {
-    document.getElementById("ui/ux_img").style.opacity = "1";
-    
-});
-document.getElementById("item_ui/ux").addEventListener('mouseout', () => {
-    document.getElementById("ui/ux_img").style.opacity = "0";
-    
-});
-
-document.getElementById("item_social_media").addEventListener('mouseover', () => {
-    document.getElementById("social_media_img").style.opacity = "1";
-    
-});
-document.getElementById("item_social_media").addEventListener('mouseout', () => {
-    document.getElementById("social_media_img").style.opacity = "0";
-    
-});
-
-document.getElementById("item_brand_strategy").addEventListener('mouseover', () => {
-    document.getElementById("brand_strategy_img").style.opacity = "1";
-    
-});
-document.getElementById("item_brand_strategy").addEventListener('mouseout', () => {
-    document.getElementById("brand_strategy_img").style.opacity = "0";
-    
-});
-
-document.getElementById("item_motion").addEventListener('mouseover', () => {
-    document.getElementById("motion_img").style.opacity = "1";
-    
-});
-document.getElementById("item_motion").addEventListener('mouseout', () => {
-    document.getElementById("motion_img").style.opacity = "0";
-    
-});
-
+    const visibleOnHover = (elementId, image) => {
+        if (e.target.parentElement.id === elementId) {
+            image.style.opacity = "1"
+        } else {
+            image.style.opacity = "0"
+        }
+    }
+    visibleOnHover('item_website', websiteImg)
+    visibleOnHover('item_ui/ux', uiUxImg)
+    visibleOnHover('item_social_media', socialMediaImg)
+    visibleOnHover('item_motion', motionImg)
+    visibleOnHover('item_brand_strategy', brandStrategyImg)
+})

@@ -92,6 +92,10 @@ input, button, select {
     border-radius: 5px;
 }
 
+input[type="text"] {
+    font-size: 0.8rem;
+}
+
 #middle button {
     background-color: #29CB97;
 }
@@ -168,7 +172,7 @@ button {
     }
 }
 
-@media only screen  and (min-width: 1450px) and (max-width: 1749px) {
+@media only screen  and (min-width: 1500px) and (max-width: 1749px) {
     html {
         font-size: 22px;
     }
@@ -182,7 +186,7 @@ button {
     }
 }
 
-@media only screen  and (min-width: 1250px) and (max-width: 1449px) {
+@media only screen  and (min-width: 1250px) and (max-width: 1500px) {
     html {
         font-size: 18px
     }
